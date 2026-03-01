@@ -14,5 +14,11 @@ def F(Q):
 def g1(Q):
     return math.log(-Q / 2 + 5)
 
-print("--- Test de convergence pour g1(Q) ---")
+#print("--- Test de convergence pour g1(Q) ---")
 iterations_g1 = Pointfixe(g1, 1.0, 1e-8, 150)
+
+def g2(Q):
+    return 10 - 2 * math.exp(Q)
+
+print("\n--- Test de divergence pour g2(Q) ---")
+iterations_g2 = Pointfixe(g2, 1.0, 1e-8, 5)
