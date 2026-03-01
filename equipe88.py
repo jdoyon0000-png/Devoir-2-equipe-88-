@@ -40,7 +40,7 @@ def gsteffa1(Q):
     
     return Q - (numerateur / denominateur)
 
-iterations_steffa1 = Pointfixe(gsteff1, 1.0, 1e-8, 150)
+iterations_steffa1 = Pointfixe(gsteffa1, 1.0, 1e-8, 150)
 
 
 
@@ -58,7 +58,7 @@ def gsteffa2(Q):
     
     return Q - (numerateur / denominateur)
 
-iterations_steffa2 = Pointfixe(gsteff2, 1.0, 1e-8, 150)
+iterations_steffa2 = Pointfixe(gsteffa2, 1.0, 1e-8, 150)
 
 
 
