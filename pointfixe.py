@@ -30,11 +30,11 @@ def Pointfixe(fonction_pointfixe, Q0, tolr, nmax):
             Q_suivant = fonction_pointfixe(Q_actuel)
             erreurRelative = abs((Q_suivant - Q_actuel) / Q_suivant)
 
-            e_n_prec = abs(X[i-1] - X[i-2])
-            e_n = abs(Q_suivant - Q_actuel)
-            
-            ratio1 = e_n / e_n_prec if e_n_prec != 0 else 0
-            ratio2 = e_n / (e_n_prec**2) if e_n_prec != 0 else 0
+            e_n = abs(X[i-1] - X[i-2]) 
+            e_n_plus_1 = abs(Q_suivant - Q_actuel)
+       
+            ratio1 = e_n_plus_1 / e_n if e_n != 0 else 0
+            ratio2 = e_n_plus_1 / (e_n**2) if e_n != 0 else 0
 
             print(f'{i} Q_actuel = {Q_actuel:E}, Q_suivant = {Q_suivant:E}, err_rel = {erreurRelative:E}, Ratio1 = {ratio1:E}, Ratio 2 = {ratio2:E}')
             time.sleep(0.5)
