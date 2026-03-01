@@ -9,15 +9,15 @@ from pointfixe import Pointfixe
 def F(Q):
     return math.e**Q + Q/2 -5
 
-#iterartion_biss = Bissection(F,1,2,0.00005,15)
+iterartion_biss = Bissection(F,1,2,0.00005,15)
 
 def g1(Q):
     return math.log(-Q / 2 + 5)
-#iterations_g1 = Pointfixe(g1, 1.0, 1e-8, 150)
+iterations_g1 = Pointfixe(g1, 1.0, 1e-8, 150)
 
 def g2(Q):
     return 10 - 2 * math.exp(Q)
-#iterations_g2 = Pointfixe(g2, 1.0, 1e-8, 5)
+iterations_g2 = Pointfixe(g2, 1.0, 1e-8, 5)
 
 def gN(Q):
     fq = math.exp(Q) + (Q / 2) - 5
@@ -26,7 +26,7 @@ def gN(Q):
 
     return Q - (fq / drvfq)
 
-#iterations_g3 = Pointfixe(gN, 1.0, 1e-8, 150)
+iterations_g3 = Pointfixe(gN, 1.0, 1e-8, 150)
 
 
 def gsteffa1(Q):
@@ -40,7 +40,7 @@ def gsteffa1(Q):
     
     return Q - (numerateur / denominateur)
 
-#iterations_steffa1 = Pointfixe(gsteff1, 1.0, 1e-8, 150)
+iterations_steffa1 = Pointfixe(gsteff1, 1.0, 1e-8, 150)
 
 
 
@@ -58,7 +58,7 @@ def gsteffa2(Q):
     
     return Q - (numerateur / denominateur)
 
-#iterations_steffa2 = Pointfixe(gsteff2, 1.0, 1e-8, 150)
+iterations_steffa2 = Pointfixe(gsteff2, 1.0, 1e-8, 150)
 
 
 
