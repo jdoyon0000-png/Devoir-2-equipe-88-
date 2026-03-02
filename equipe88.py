@@ -74,4 +74,4 @@ def gsteffaN(Q):
     
     return Q - ((qn_1 - Q)**2 / (qn_2 - 2 * qn_1 + Q))
 
-iterations_steffa2 = Pointfixe(gsteffaN, 1.0, 1e-8, 150)
+iterations_steffaN = Pointfixe(gsteffaN, 1.0, 1e-8, 150)
