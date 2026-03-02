@@ -32,13 +32,13 @@ iterations_g3 = Pointfixe(gN, 1.0, 1e-8, 150)
 def gsteffa1(Q):
     def g1(x):
         return math.log((-x / 2) + 5)
-    g1_Q = g1(Q)
-    g1_g1_Q = g1(g1_Q)
+    g1Q = g1(Q)
+    g1g1Q = g1(g1Q)
     
-    numerateur = (g1_Q - Q)**2
-    denominateur = g1_g1_Q - (2 * g1_Q) + Q
+    a = (g1Q - Q)**2
+    b = g1g1Q - (2 * g1Q) + Q
     
-    return Q - (numerateur / denominateur)
+    return Q - (a / b)
 
 iterations_steffa1 = Pointfixe(gsteffa1, 1.0, 1e-8, 150)
 
@@ -50,13 +50,13 @@ def gsteffa2(Q):
     def g2(x):
         return 10 - 2 * math.exp(x)
     
-    val_g2 = g2(Q)
-    val_g2_g2 = g2(val_g2)
+    g2Q = g2(Q)
+    g2g2Q = g2(g2Q)
 
-    numerateur = (val_g2 - Q)**2
-    denominateur = val_g2_g2 - (2 * val_g2) + Q
+    a = (g2Q - Q)**2
+    b = g2g2Q - (2 * g2Q) + Q
     
-    return Q - (numerateur / denominateur)
+    return Q - (a / b)
 
 iterations_steffa2 = Pointfixe(gsteffa2, 1.0, 1e-8, 150)
 
